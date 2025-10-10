@@ -4,7 +4,7 @@
  PressureIndependMultiYield
 ============================
 
-.. function:: nDMaterial('PressureIndependMultiYield', matTag, nd, rho, refShearModul, refBulkModul, cohesi, peakShearStra, frictionAng=0., refPress=100., pressDependCoe=0., noYieldSurf=20, *yieldSurf)
+.. function:: nDMaterial('PressureIndependMultiYield', matTag, nd, rho, refShearModul, refBulkModul, cohesi, peakShearStra, frictionAng, refPress, pressDependCoe, noYieldSurf=20, *yieldSurf)
    :noindex:
 
    PressureIndependMultiYield material is an elastic-plastic material in which plasticity exhibits only in the deviatoric stress-strain response. The volumetric stress-strain response is linear-elastic and is independent of the deviatoric response. This material is implemented to simulate monotonic or cyclic response of materials whose shear behavior is insensitive to the confinement change. Such materials include, for example, organic soils or clay under fast (undrained) loading conditions.
@@ -27,15 +27,15 @@
 				      specified at a reference mean effective confining
 				      pressure refPress of p'r (see below).
    ``frictionAng`` |float|            (:math:`phi`) Friction angle at peak shear
-                                      strength in degrees, optional (default is 0.0).
+                                      strength in degrees (recommendation is 0.0).
    ``refPress`` |float|               (:math:`p'_r`) Reference mean effective confining
                                       pressure at which
 				      :math:`G_r`, :math:`B_r`, and :math:`\gamma_{max}`
-				      are defined, optional (default is 100. kPa).
+				      are defined (recommendation is 100. kPa).
    ``pressDependCoe`` |float|         (:math:`d`) A positive constant defining variations
                                       of :math:`G` and :math:`B` as a function of
 				      instantaneous effective
-				      confinement :math:`p'` (default is 0.0)
+				      confinement :math:`p'` (recommendation is 0.0)
 
 				      :math:`G=G_r(\frac{p'}{p'_r})^d`
 
